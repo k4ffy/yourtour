@@ -1,0 +1,64 @@
+.hero {
+	padding: (119px+88px) 0px 119px 0px;
+	background-image: 
+		linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), 
+		linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+		url('../img/hero/bg.jpg');
+	background-position: 0, 0, center center;
+	background-size: auto, auto, cover ;
+	background-repeat: no-repeat;
+
+
+	&__container {
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 50px;
+		align-items: center;
+	}
+
+	&__title {
+		max-width: 768px;
+		margin: 0 auto;
+		text-align: center;
+		color: $white;
+	}
+
+	&__descr {
+		max-width: 562px;
+		margin: 0 auto;
+		text-align: center;
+		color: $white;
+	}
+
+	&__actions {
+		margin: 0 auto;
+	}
+
+	&__button {
+		padding: 5px 20px;
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 142%;
+		letter-spacing: -0.01em;
+		color: $black;
+		background-color: $white;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+
+
+		&:hover {
+			color: $white;
+			background-color: $orange200;
+		}
+
+		&:active {
+			color: $black;
+			background-color: $orange100;
+		}
+	}
+}

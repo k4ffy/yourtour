@@ -1,0 +1,271 @@
+.build-tour {
+	padding: 135px 0px 0px 0px;
+
+	&__container {
+	}
+
+	&__section-header {
+		margin: 0px 0px 98px 0px;
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__form {
+	}
+}
+
+.form-tour {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	gap: 33px 30px;
+	padding: 70px;
+	background-color: $white;
+	border-radius: 50px;
+
+	&__input-group {
+		display: flex;
+		flex-direction: column;
+
+		input,
+		select,
+		textarea {
+			box-sizing: border-box;
+			padding: 20px;
+			height: 68px;
+			color: $black;
+			background-color: $beige100;
+			border: 1px solid $beige200;
+			border-radius: 10px;
+			transition: all 0.3s ease 0s;
+
+			&::placeholder {
+				color: $gray300;
+			}
+
+			&:hover {
+				background-color: $beige200;
+			}
+
+			&:focus {
+				outline: none;
+				border-color: $gray300;
+				background-color: $beige200;
+			}
+		}
+
+		label {
+			margin: 0px 0px 8px 0px;
+		}
+
+		&_input {
+			transition: all 0.3s ease 0s;
+		}
+
+		&_select {
+			select {
+				width: 100%;
+				padding: 20px 55px 20px 20px;
+				background: $beige100 url('../img/icons/chevron.svg') top 50% right 23px no-repeat;
+				appearance: none;
+				cursor: pointer;
+			}
+
+			select:required:invalid {
+				color: $gray300;
+			}
+
+			option[value=""][disabled] {
+				display: none;
+			}
+
+			option {
+				color: $black;
+			}
+		}
+
+		&_date {
+			input {
+				text-transform: uppercase;
+
+				&:placeholder {
+					color: red;
+				}
+			}
+			input[type="date"]::-webkit-inner-spin-button,
+			input[type="date"]::-webkit-calendar-picker-indicator {
+				display: none;
+				-webkit-appearance: none;
+			}
+		}
+
+		&_textarea {
+			grid-column: 1 / 3;
+
+			textarea {
+				height: 152px;
+				resize: none;
+			}
+		}
+
+		&_radio {
+
+			&:not(:last-child) {
+				margin: 0px 31px 0px 0px;
+			}
+
+			label {
+				position: relative;
+				padding: 0px 0px 0px 37px;
+				color: $black;
+				cursor: pointer;
+			}
+
+			input[type="radio"] {
+				position: absolute;
+				width: 0;
+				height: 0;
+				opacity: 0;
+			}
+
+			input[type="radio"] + label::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 26px;
+				height: 26px;
+				border: 2px solid $black;
+				border-radius: 50%;
+			}
+
+			input[type="radio"] + label::after {
+				content: '';
+				position: absolute;
+				top: 7px;
+				left: 7px;
+				width: 12px;
+				height: 12px;
+				border-radius: 100%;
+				background-color: $black;
+				transition: all 0.2s ease;
+			}
+
+			input[type="radio"]:not(:checked) + label::after {
+				opacity: 0;
+			}
+
+			input[type="radio"]:checked + label::after {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			// ===== Обводка для a11y =====
+			input[type="radio"]:focus + label::before {
+				outline: 2px solid $green300;
+				outline-offset: 2px;
+			}
+
+			input[type="radio"]:focus:not(:focus-visible) + label::before {
+				outline: none;
+			}
+		}
+	}
+
+	&__radio {
+		grid-column: 1 / 3;
+		display: flex;
+		flex-direction: column;
+
+		label {
+			margin: 0px 0px 7px 0px;
+		}
+	}
+
+	&__radio-wrapper {
+		display: flex;
+	}
+
+	&__terms {
+		grid-column: 1 / 3;
+
+		label {
+			display: block;
+			position: relative;
+			padding: 0px 0px 0px 45px;
+			font-size: 17px;
+			line-height: 142%;
+			letter-spacing: -0.01em;
+			color: $gray300;
+			cursor: pointer;
+			
+			a {
+				color: $black;
+				border-bottom: 1px solid transparent;
+				transition: all 0.3s ease 0s;
+
+				&:hover,
+				&:focus {
+					outline: none;
+					border-color: $black;
+				}
+
+				&:active {
+					color: $green400;
+					border-color: $green400;
+				}
+			}
+		}
+
+		input[type="checkbox"] {
+			position: absolute;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		input[type="checkbox"] + label::before {
+			content: '';
+			position: absolute;
+			top: -5px;
+			left: 0;
+			width: 26px;
+			height: 26px;
+			border: 2px solid $black;
+			border-radius: 4px;
+		}
+
+		input[type="checkbox"]:checked + label::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 26px;
+			height: 26px;
+			background: url('../img/icons/check.svg') center center 	no-repeat;
+			background-position-y: 3px;
+		}
+
+		// ===== Обводка для a11y =====
+		input[type="checkbox"]:focus + label::before {
+			outline: 2px solid $green300;
+			outline-offset: 2px;
+		}
+
+		input[type="checkbox"]:focus:not(:focus-visible) + label::before {
+			outline: none;
+		}
+	}
+
+	&__actions {
+		grid-column: 1 / 3;
+		display: flex;
+		column-gap: 30px;
+		margin-top: -3px;
+	}
+}

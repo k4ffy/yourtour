@@ -1,0 +1,803 @@
+@media screen and (max-width: 1399px) {
+	.gallery {
+
+		&__wrapper {
+			padding: 0 10px;
+		}
+
+		&__row {
+			column-gap: 20px;
+
+			&_edge {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			&_middle {
+				grid-template-columns: repeat(4, 1fr);
+
+				.gallery__image:nth-child(3) {
+					display: none;
+				}
+			}
+
+			&_upper {
+				.gallery__image:nth-child(2) {
+					display: none;
+				}
+			}
+
+			&_down {
+				.gallery__image:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1199.98px) {
+	[class*=__container] {
+		max-width: 918px;
+		padding: 0 15px;
+	}
+
+	.header {
+		&__container {
+			column-gap: 20px;
+		}
+	}
+
+	.menu {
+		column-gap: 30px;
+	}
+
+	.hero {
+		background-image: 
+			linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), 
+			linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+			url('../img/hero/bg-min.jpg');
+		background-position: 0, 0, center center;
+		background-size: auto, auto, cover ;
+		background-repeat: no-repeat;
+
+		&__descr {
+			max-width: 450px;
+		}
+	}
+
+	.choose-tour {
+		&__cards {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 18px;
+		}
+	}
+
+	.form-tour {
+		padding: 60px;
+		column-gap: 20px;
+
+		&__terms {
+			label {
+				padding: 0px 0px 0px 37px;
+			}
+		}
+	}
+
+	.reviews {
+		&__cards {
+			column-gap: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 991.98px) {
+	[class*=__container] {
+		max-width: 720px;
+		padding: 0 15px;
+	}
+
+	.wrapper {
+		> main {
+			> *:last-child {
+				margin: 0px 0px 100px 0px;
+			}
+		}
+	}
+	
+	h1.title {
+		font-size: 80px;
+	}
+
+	h2.title {
+		font-size: 49px;
+	}
+
+	h3.title {
+		font-size: 30px;
+	}
+
+	.button {
+		background-color: $green400;
+
+		&_reset {
+			background-color: $green100;
+		}
+	}
+
+	.card-action {
+		margin: 0px 0px -7px -20px;
+		background-color: transparent;
+	}
+
+	.choose-tour,
+	.build-tour,
+	.reviews,
+	.gallery,
+	.stories,
+	.cta {
+		padding: 100px 0px 0px 0px;
+
+		&__section-header {
+			margin: 0px 0px 75px 0px;
+		}
+	}
+
+	.header {
+		&__phone {
+			border: none;
+		}
+	}
+
+	.menu {
+		display: none;
+	}
+	
+	.hero {
+		&__button {
+			&:hover {
+				color: $black;
+				background-color: $white;
+			}
+		}
+	}
+
+	.choose-tour {
+		
+		&__tab:not(&__tab_active) {
+			border: none;
+		}
+	}
+
+	.tour-card {
+		&:hover,
+		&:focus {
+			.tour-card__cover {
+				transform: scale(1);
+			}
+
+			.card-action {
+				margin: 0px 0px -7px -20px;
+				background-color: transparent;
+			}
+		}
+
+		&:active {
+			.card-action {
+				background-color: transparent;
+			}
+		}
+	}
+
+	.form-tour {
+		&__input-group {
+			input,
+			select,
+			textarea {
+
+				&:hover {
+					background-color: $beige100;
+				}
+
+				&:focus {
+					border-color: $beige200;
+					background-color: $beige100;
+				}
+			}
+		}
+
+		&__terms {
+			label {
+				a {
+					border: none;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: $black;
+					}
+				}
+			}
+		}
+
+		&__actions {
+			.button {
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $green400;
+				}
+
+				&_reset {
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: $green100;
+					}
+				}
+			}
+		}
+	}
+
+	.reviews {
+		&__cards {
+			grid-template-columns: 1fr;
+			row-gap: 18px;
+		}
+	}
+
+	.gallery {
+		&__row {
+			grid-auto-rows: 200px;
+			column-gap: 18px;
+
+			&:not(:last-child) {
+				margin: 0px 0px 18px 0px;
+			}
+		}
+	}
+
+	.stories {
+		&__content {
+			grid-auto-rows: 500px;
+			row-gap: 35px;
+		}
+	}
+
+	.card-stories {
+		padding: 50px;
+
+		&:hover {
+			.card-stories__cover {
+				transform: scale(1);
+			}
+	
+			.card-action {
+				margin: 0px 0px -7px -20px;
+				background-color: transparent;
+			}
+		}
+
+		&__social {
+			border: none;
+
+			&:active {
+				color: $white;
+			}
+		}
+	}
+
+	.cta {
+		&__image {
+			width: 320px;
+			height: 320px;
+		}
+
+		&__text {
+			a {
+				border: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	.socials {
+		&__item {
+			span {
+				border: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: 540px;
+	}
+
+	h1.title {
+		font-size: 65px;
+	}
+
+	h2.title {
+		font-size: 40px;
+	}
+
+	.wrapper {
+		> main {
+			> *:last-child {
+				margin: 0px 0px 75px 0px;
+			}
+		}
+	}
+
+	.button {
+		height: auto;
+		min-width: 130px;
+	}
+
+	.header {
+		&__container {
+			column-gap: 10px;
+		}
+	}
+
+	.hero {
+		padding: 175px 0px 100px 0px;
+
+		&__content {
+			row-gap: 40px;
+		}
+	}
+
+	.choose-tour,
+	.build-tour,
+	.reviews,
+	.gallery,
+	.stories,
+	.cta {
+		padding: 75px 0px 0px 0px;
+
+		&__section-header {
+			margin: 0px 0px 50px 0px;
+		}
+	}
+
+	.choose-tour {
+		&__cards {
+			grid-template-columns: 100%;
+			grid-auto-rows: 450px;
+		}
+
+		&__tab {
+			padding: 0;
+		}
+	}
+
+	.tour-card {
+		padding: 40px;
+		border-radius: 40px;
+	}
+
+	.form-tour {
+		grid-template-columns: 100%;
+		padding: 40px;
+		border-radius: 40px;
+		gap: 30px;
+
+		&__input-group,
+		&__radio,
+		&__terms,
+		&__actions {
+			grid-column: 1 / 2;
+		}
+
+		&__actions {
+			column-gap: 20px;
+			.button {
+				flex: 1 1 50%;
+			}
+		}
+	}
+
+	.card-review {
+		&__text {
+			font-size: 20px;
+		}
+
+		&__user-name {
+			font-size: 30px;
+		}
+	}
+
+	.card-action {
+		font-size: 20px;
+	}
+
+	.gallery {
+		&__image {
+			border-radius: 40px;
+		}
+
+		&__row {
+			column-gap: 20px;
+
+			&_edge {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			&_middle {
+				grid-template-columns: repeat(3, 1fr);
+
+				.gallery__image:nth-child(2) {
+					display: none;
+				}
+			}
+
+			&_upper {
+				.gallery__image:nth-child(3) {
+					display: none;
+				}
+			}
+
+			&_down {
+				.gallery__image:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.stories {
+		&__content {
+			grid-auto-rows: 475px;
+		}
+	}
+
+	.card-stories {
+		padding: 40px;
+		border-radius: 40px;
+
+		&__title {
+			margin: 0px 0px 25px 0px;
+		}
+
+		&__list {
+			padding: 0px 0px 0px 25px;
+		}
+
+		&__socials {
+			display: none;
+		}
+	}
+
+	.cta {
+		&__box {		
+			flex-direction: column;
+			align-items: center;
+			row-gap: 30px;
+		}
+
+		&__image {
+			width: 250px;
+			height: 250px;
+		}
+
+		&__title {
+			margin: 0px 0px 20px 0px;
+			text-align: center;
+		}
+
+		&__text {
+			text-align: center;
+		}
+	}
+
+	.footer {
+		padding: 20px;
+
+		&__container {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 7px;
+		}
+	}
+
+	.socials {
+		column-gap: 15px;
+	}
+}
+
+@media screen and (max-width: 575.98px) {
+	[class*="__container"] {
+		max-width: 320px;
+	}
+
+	body {
+		font-size: 16px;
+		line-height: 142%;
+	}
+
+	h1.title,
+	h2.title  {
+		font-size: 34px;
+		line-height: 112%;
+		letter-spacing: 0.02em;
+	}
+
+	h3.title {
+		font-size: 23px;
+		line-height: 120%;
+		letter-spacing: 0.04em;
+	}
+
+	.card-action {
+		font-size: 16px;
+	}
+
+	.section-header {
+		&__title {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	.header {
+		&__logo {
+			width: 133px;
+		}
+	}
+
+	.hero {
+		padding: 140px 0px 53px 0px;
+
+		&__button {
+			font-size: 16px;
+		}
+
+		&__descr {
+			max-width: 310px;
+		}
+	}
+
+	.choose-tour {
+		&__section-header .title {
+			margin: 0px 0px 31px 0px;
+		}
+
+		&__tabs {
+			column-gap: 10px;
+			row-gap: 8px
+		}
+
+		&__tab {
+			font-size: 16px;
+			line-height: 142%;
+		}
+
+		&__cards {
+			grid-template-columns: 100%;
+			grid-auto-rows: 318px;
+		}
+	}
+
+	.tour-card {
+		padding: 25px;
+		border-radius: 20px;
+
+		&__title {
+			&:not(:last-child) {
+				margin: 0px 0px 13px 0px;
+			}
+		}
+
+		&__price {
+			font-size: 16px;
+			line-height: 142%;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	.build-tour {
+		&__section-header {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
+	.form-tour {
+		padding: 20px 20px 40px;
+		border-radius: 30px;
+		gap: 30px;
+
+		&__input-group {
+			input,
+			select,
+			textarea {
+				height: auto;
+				padding: 11px 10px;
+			}
+		
+			&_textarea {
+				textarea {
+					height: 132px;
+				}
+			}
+
+			&_select {
+				select {
+					padding: 13px 35px 13px 10px;
+					background-position: right 12px top 50%;
+				}
+			}
+			
+			&_radio {
+				label {
+					padding: 0px 0px 0px 30px;
+				}
+
+				input[type="radio"] + label::before {
+					width: 20px;
+					height: 20px;
+				}
+
+				input[type="radio"] + label::after {
+					top: 5px;
+					left: 5px;
+					width: 10px;
+					height: 10px;
+				}
+			}
+			
+		}
+
+		&__terms {
+			input[type="checkbox"] + label::before {
+				width: 20px;
+				height: 20px;
+				top: -1px;
+			}
+
+			input[type="checkbox"]:checked + label::after {
+				width: 20px;
+				height: 20px;
+				background: url('../img/icons/check.svg') center center no-repeat;
+				background-position-y: 5px;
+				background-size: 11px;
+			}
+
+			label {
+				padding: 0px 0px 0px 30px;
+
+				font-size: 16px;
+				line-height: 142%;
+			}
+		}
+
+		&__actions {
+			column-gap: 10px;
+			margin-top: 0;
+			.button {
+				padding: 12px 20px;
+				font-size: 16px;
+				line-height: 142%;
+			}
+		}
+	}
+
+	.reviews {
+		&__cards {
+			grid-auto-rows: auto;
+		}
+	}
+
+	.card-review {
+		padding: 20px;
+		border-radius: 20px;
+
+		&__text {
+			font-size: 16px;
+			line-height: 144%;
+		}
+
+		&__footer {
+			margin: 40px 0px 0px 0px;
+		}
+
+		&__user-name {
+			font-size: 23px;
+			line-height: 120%;
+			letter-spacing: 0.04em;
+		}
+
+		&__tour-name {
+			font-size: 16px;
+			line-height: 142%;
+			letter-spacing: -0.01em;
+		}
+	}
+
+	.gallery {
+		&__row {
+			grid-auto-rows: 110px;
+			column-gap: 10px;
+		}
+
+		&__image {
+			border-radius: 20px;
+		}
+	}
+
+	.stories {
+		&__content {
+			grid-auto-rows: 455px;
+			row-gap: 20px;
+		}
+	}
+
+	.card-stories {
+		padding: 30px 25px 30px 30px;
+		border-radius: 20px;
+
+		&__title {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	.cta {
+		&__box {
+			max-width: 291px;
+		}
+
+		&__image {
+			width: 130px;
+			height: 133px;
+			border-radius: 20px;
+		}
+
+		&__body {
+			width: auto;
+		}
+	}
+
+	.socials {
+		&__item {
+			column-gap: 5px;
+		}
+
+		&__icon {
+			width: 20px;
+			height: 20px;
+
+			&_inst {
+				background-position: bottom 3px right 1px;
+				background-size: 11px;
+			}
+
+			&_fb {
+				background-position: bottom 2px right 4px;
+				background-size: 6px;
+			}
+
+			&_vk {
+				background-position: bottom 2px right 1px;
+				background-size: 16px;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 319.98px) {
+	[class*="__container"] {
+		max-width: auto;
+	}
+}

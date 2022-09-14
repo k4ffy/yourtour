@@ -1,0 +1,33 @@
+.button {
+	display: inline-block;
+	padding: 15px 30px;
+	min-width: 235px;
+	height: 58px;
+	color: $white;
+	background: $green400;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background-color: $green300;
+	}
+
+	&:active {
+		background-color: $green200;
+	}
+
+	&_reset {
+		color: $green400;
+		background-color: $green100;
+
+		&:hover {
+			background-color: $gray100;
+		}
+
+		&:active {
+			background-color: $gray200;
+		}
+	}
+}

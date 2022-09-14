@@ -1,0 +1,85 @@
+<section class="build-tour" id="build">
+	<div class="build-tour__container">
+		<div class="build-tour__section-header section-header">
+			<h2 class="build-tour__title section-header__title title">
+				Собери свой тур
+			</h2>
+			
+			<p class="build-tour__text section-header__text">
+				Идейные соображения высшего порядка, <br>а также рамки и место обучения кадров
+			</p>
+		</div>
+
+		<form action="#" class="build-tour__form form-tour">
+			<div class="form-tour__input-group form-tour__input-group_input">
+				<label for="name">Имя</label>
+				<input required id="name" name="name" type="text" placeholder="Введите Ваше имя">
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_select">
+				<label for="direction">Направление</label>
+				<select required name="direction" id="direction">
+					<option value="" selected disabled hidden>Куда хотите ехать</option>
+					<option value="mountains">Путешествие в горы</option>
+					<option value="prague">Прогулка по Праге</option>
+					<option value="mobile-home">Путешествие в доме на колёсах</option>
+				</select>
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_input">
+				<label required for="email">Email</label>
+				<input name="email" id="email" type="email" placeholder="example@mail.com">
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_input">
+				<label required for="phone">Телефон</label>
+				<input name="phone" id="phone" type="text" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_date">
+				<label required for="date-from">Дата от</label>
+				<input type="text" name="date-from" id="date-from" placeholder="ДД.ММ.ГГГГ">
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_date">
+				<label required for="date-to">Дата до</label>
+				<input type="text" name="date-to" id="date-to" placeholder="ДД.ММ.ГГГГ">
+			</div>
+
+			<div class="form-tour__input-group form-tour__input-group_textarea">
+				<label for="message">Комментарий</label>
+				<textarea name="message" id="message"></textarea>
+			</div>
+
+			<div class="form-tour__radio">
+				<label>Вам есть 18 лет?</label>
+
+				<div class="form-tour__radio-wrapper">
+					<div class="form-tour__input-group_radio">
+						<input required type="radio" name="age-verification" value="yes" id="age-verification-yes">
+						<label for="age-verification-yes">
+							Да
+						</label>
+					</div>
+					<div class="form-tour__input-group_radio">
+						<input required type="radio" name="age-verification" value="no" id="age-verification-no">
+						<label for="age-verification-no">
+							Нет
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-tour__terms">
+				<input type="checkbox" name="terms" id="terms">
+				<label for="terms">Нажимая кнопку, я принимаю условия <a href="./terms.html" target="_blank">Лицензионного договора</a></label>
+			</div>
+
+			<div class="form-tour__actions">
+				<button type="submit" class="button">Найти тур</button>
+				<button type="reset" class="button button_reset">Сбросить</button>
+			</div>
+			
+		</form>
+	</div>
+</section>

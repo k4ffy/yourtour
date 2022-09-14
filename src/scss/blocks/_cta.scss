@@ -1,0 +1,51 @@
+.cta {
+	padding: 135px 0px 0px 0px;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+		margin: 0 auto;
+	}
+
+	&__image {
+		width: 370px;
+		height: 370px;
+		overflow: hidden;
+		border-radius: 50px;
+	}
+
+	&__body {
+		width: 371px;
+	}
+
+	&__title {
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__text {
+		color: $gray300;
+
+		a {
+			color: $black;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease 0s;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				border-color: $black;
+			}
+
+			&:active {
+				color: $green400;
+				border-color: $green400;
+			}
+		}
+	}
+}
