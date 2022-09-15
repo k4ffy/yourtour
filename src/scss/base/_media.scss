@@ -509,7 +509,7 @@
 		&__container {
 			flex-direction: column;
 			align-items: center;
-			row-gap: 7px;
+			row-gap: 10px;
 		}
 	}
 
@@ -622,8 +622,12 @@
 			input,
 			select,
 			textarea {
-				height: auto;
+				height: 43px;
 				padding: 11px 10px;
+			}
+
+			label {
+				line-height: 144%;
 			}
 		
 			&_textarea {
@@ -634,7 +638,8 @@
 
 			&_select {
 				select {
-					padding: 13px 35px 13px 10px;
+					height: 46px;
+					padding: 11px 35px 11px 10px;
 					background-position: right 12px top 50%;
 				}
 			}
@@ -676,9 +681,9 @@
 
 			label {
 				padding: 0px 0px 0px 30px;
-
 				font-size: 16px;
-				line-height: 142%;
+				line-height: 146%;
+				letter-spacing: 0;
 			}
 		}
 
