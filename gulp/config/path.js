@@ -1,6 +1,8 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
+import config from 'config';
+
 const buildFolder = './dist';
 const srcFolder = './src';
 
@@ -33,5 +35,5 @@ export const path = {
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
-	ftp: 'test.k4ffy.xyz'
+	ftp: config.get('ftp')
 };
