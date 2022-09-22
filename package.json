@@ -30,6 +30,7 @@
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
     "gulp-svg-sprite": "latest",
     "gulp-ttf2woff2": "latest",
     "gulp-util": "latest",

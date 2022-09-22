@@ -6,6 +6,7 @@ import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import gcmq from 'gulp-group-css-media-queries';
 import replace from 'gulp-replace';
+import sourcemaps from 'gulp-sourcemaps';
 
 const sass = gulpSass(dartSass);
 
@@ -17,6 +18,12 @@ export const scss = () => {
 				message: "Error: <%= error.message %>"
 			})
 		))
+		.pipe(
+			app.plugins.if(
+				app.isDev,
+				sourcemaps.init()
+			)
+		)
 		.pipe(sass({
 			outputStyle: 'expanded'
 		}))
@@ -56,6 +63,12 @@ export const scss = () => {
 			basename: "style",
 			extname: ".min.css"
 		}))
+		.pipe(
+			app.plugins.if(
+				app.isDev,
+				sourcemaps.write('./maps')
+			)
+		)
 
 		// Исправляет ошибку gulp-group-css-media-queries
 		// из-за которой в ссылке на Google Font добавлялся
