@@ -2,6 +2,7 @@
 	min-height: 88px;
 	padding: 30px 0;
 	background-color: $beige200;
+	line-height: 125%;
 
 	&__container {
 		display: flex;
@@ -48,11 +49,11 @@
 		}
 		
 		&_fb {
-			background: url('../img/footer/icons/facebook.svg') bottom 4px right 5px no-repeat;
+			background: url('../img/footer/icons/facebook.svg') bottom 5px right 5px no-repeat;
 		}
 		
 		&_vk {
-			background: url('../img/footer/icons/vk.svg') bottom 4px right 2px no-repeat;
+			background: url('../img/footer/icons/vk.svg') bottom 5px right 2px no-repeat;
 		}
 	}
 }
