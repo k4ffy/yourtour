@@ -46,6 +46,7 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "imask": "^6.4.3",
     "moveto": "^1.8.2"
   }
 }

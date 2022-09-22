@@ -12,3 +12,4 @@ window.addEventListener('scroll', () => {
 });
 
 import './modules/moveto.js';
+import './modules/imask.js';
